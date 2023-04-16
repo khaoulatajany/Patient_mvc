@@ -20,13 +20,13 @@ public class PatientsMvcApplication {
     CommandLineRunner commandLineRunner(PatientRepository patientRepository){
         return args -> {
             patientRepository.save(
-                    new Patient(null,"khaoula",new Date(),false,12));
+                    new Patient(null,"khaoula",new Date(),false,120));
             patientRepository.save(
-                    new Patient(null,"houda",new Date(),true,13));
+                    new Patient(null,"houda",new Date(),true,130));
             patientRepository.save(
-                    new Patient(null,"aya",new Date(),true,14));
+                    new Patient(null,"aya",new Date(),true,140));
             patientRepository.save(
-                    new Patient(null,"yassine",new Date(),false,15));
+                    new Patient(null,"yassine",new Date(),false,150));
 
             patientRepository.findAll().forEach(p->{
                 System.out.println(p.getNom());
